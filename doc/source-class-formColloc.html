@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Collocation/modeles/formColloc.php | cvven2</title>
+
+	<script type="text/javascript" src="resources/combined.js?3090504956"></script>
+	<script type="text/javascript" src="elementlist.js?490661080"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-AttributeList.html">AttributeList</a></li>
+				<li><a href="class-calendrier.html" class="invalid">calendrier</a></li>
+				<li><a href="class-Depot.html">Depot</a></li>
+				<li><a href="class-ErrorList.html">ErrorList</a></li>
+				<li><a href="class-Form.html">Form</a></li>
+				<li><a href="class-Form_Checkbox.html">Form_Checkbox</a></li>
+				<li><a href="class-Form_Date.html">Form_Date</a></li>
+				<li><a href="class-Form_Email.html">Form_Email</a></li>
+				<li><a href="class-Form_Field.html">Form_Field</a></li>
+				<li><a href="class-Form_File.html">Form_File</a></li>
+				<li><a href="class-Form_Hidden.html">Form_Hidden</a></li>
+				<li><a href="class-Form_Input.html">Form_Input</a></li>
+				<li><a href="class-Form_Password.html">Form_Password</a></li>
+				<li><a href="class-Form_Radio.html">Form_Radio</a></li>
+				<li><a href="class-Form_Select.html">Form_Select</a></li>
+				<li><a href="class-Form_Submit.html">Form_Submit</a></li>
+				<li><a href="class-Form_Text.html">Form_Text</a></li>
+				<li><a href="class-Form_Textarea.html">Form_Textarea</a></li>
+				<li class="active"><a href="class-formColloc.html">formColloc</a></li>
+				<li><a href="class-ListArray.html">ListArray</a></li>
+				<li><a href="class-tc_calendar.html">tc_calendar</a></li>
+				<li><a href="class-tc_date.html">tc_date</a></li>
+				<li><a href="class-tc_date_main.html">tc_date_main</a></li>
+				<li><a href="class-Type.html" class="invalid">Type</a></li>
+				<li><a href="class-User.html">User</a></li>
+				<li><a href="class-user.html">user</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-ajoutUneSemaine.html">ajoutUneSemaine</a></li>
+				<li><a href="function-geraTimestamp.html">geraTimestamp</a></li>
+				<li><a href="function-strptime.html">strptime</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-formColloc.html" title="Summary of formColloc"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * Classe gestion du formulaire de collocation
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> */</span>
+</span><span id="5" class="l"><a class="l" href="#5"> 5: </a>
+</span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-keyword1">class</span> <a id="formColloc" href="#formColloc">formColloc</a>{
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a>    <span class="php-keyword1">function</span> <a id="_ajouter" href="#_ajouter">ajouter</a>(){
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a>        <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>)){
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a>            <span class="php-keyword2">extract</span>(<span class="php-var">$_POST</span>);
+</span><span id="10" class="l"><a class="l" href="#10">10: </a>            
+</span><span id="11" class="l"><a class="l" href="#11">11: </a>            <span class="php-var">$sql</span> = <span class="php-quote">&quot;INSERT INTO collocHV (nom,prenom,adresse,cp,ville,pays,tel,email,type,motif,matos,repas,heber)
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-quote">                        VALUES ('</span><span class="php-var">$nom</span><span class="php-quote">','</span><span class="php-var">$prenom</span><span class="php-quote">','</span><span class="php-var">$adr</span><span class="php-quote">','</span><span class="php-var">$cp</span><span class="php-quote">','</span><span class="php-var">$ville</span><span class="php-quote">','</span><span class="php-var">$pays</span><span class="php-quote">','</span><span class="php-var">$tel</span><span class="php-quote">','</span><span class="php-var">$mail</span><span class="php-quote">','</span><span class="php-var">$Type_resevation</span><span class="php-quote">','</span><span class="php-var">$motif</span><span class="php-quote">','</span><span class="php-var">$matos</span><span class="php-quote">','</span><span class="php-var">$repas</span><span class="php-quote">','</span><span class="php-var">$heber</span><span class="php-quote">')&quot;</span>;
+</span><span id="13" class="l"><a class="l" href="#13">13: </a>                <span class="php-var">$req</span> = <span class="php-var">$GLOBALS</span>[<span class="php-quote">'bdd'</span>]-&gt;query(<span class="php-var">$sql</span>) <span class="php-keyword1">or</span> <span class="php-keyword1">die</span>(<span class="php-quote">'Erreur SQL !&lt;br /&gt;'</span>.<span class="php-var">$sql</span>.<span class="php-quote">'&lt;br /&gt;'</span>.  <span class="php-keyword2">mysql_error</span>());
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>        }
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>    }
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>}
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>
+</span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="xlang">?&gt;</span>
+</span><span id="19" class="l"><a class="l" href="#19">19: </a></span></code></pre>
+
+	<div id="footer">
+		cvven2 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

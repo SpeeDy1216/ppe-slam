@@ -1,0 +1,302 @@
+/* 
+    Document   : style
+    Created on : 24 nov. 2013, 13:18:41
+    Author     : SpeeDy1216
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 1.5em; 
+    background-color: #ccc;
+    background-repeat: repeat;
+}
+
+#body{
+    width: 100%;
+    background: url(../img/templatemo_body_top.jpg) top repeat-x;
+}
+
+#wrapper {
+    width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+}
+p { margin: 0px; padding: 0; }
+img { border: none; }
+
+h1, h2, h3, h4, h5, h6 { color: #000; }
+h1 { font-size: 40px; font-weight: normal; margin: 0 0 20px 0; padding: 5px 0; }
+h2 { font-size: 28px; font-weight: normal; margin: 0 0 20px 0; padding: 10px 0 15px 0; }
+h3 { font-size: 21px; font-weight: normal; margin: 0 0 15px 0; padding: 0; padding: 0 0 10px 0; }
+h4 { font-size: 18px; margin: 0 0 20px 0; padding: 0 0 10px 0; ; }
+h5 { font-size: 16px; margin: 0 0 10px 0; padding: 0; }
+h6 { font-size: 14px; margin: 0 0 5px 0; padding: 0; }
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+
+/****************
+ **** HEADER ****
+ ****************/
+
+#logo{
+    width: 940px;
+    padding: 10px 30px;
+}
+
+#logo #titre{
+    float: left;
+    width: 500px;
+    padding: 40px 0 30px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0px;
+
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a, a:link, a:visited { color: #333; text-decoration: underline; }
+a:hover { color: #990000; text-decoration: none; }
+
+ul { margin: 0; padding: 0; }
+ul li { margin: 0; padding: 0; }
+
+/****************
+ ***** MENU *****
+ ****************/
+
+#menu{
+    clear: both;
+    width: 1000px;
+    height: 35px;
+}
+
+#menu ul{
+    float: left;
+    display: block;
+    width: 700px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+
+#menu ul li{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#menu ul li a{
+    position: relative;
+    float: left;
+    display: block;
+    height: 21px;
+    padding: 7px 28px;
+    font-size: 15px;
+    color: #fff;	
+    text-decoration: none;
+    font-weight: normal;
+    text-align: center;
+    outline: none; 
+}
+
+#menu ul li a:hover, #menu ul .current {
+    color: #000;
+    /*background: url(../images/templatemo_menu_right.jpg) no-repeat top right;*/
+
+}
+
+#menu ul li a:hover span, #menu ul .current span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 35px;
+    background: url(../res/images/templatemo_menu_left.jpg);
+}
+#connexion .signup { color:#F00; font-weight: bold; text-decoration: none; }
+#connexion .inscrip { color:#00be10; font-weight: bold; text-decoration: none; }
+
+#menu{
+    clear: both;
+    width: 1000px;
+    height: 35px;
+}
+
+#connexion {
+    padding: 6px;
+    float: right;
+}
+
+#deconnexion {
+    float: right;
+    padding: 6px;
+}
+
+#deconnexion > a {
+    color: #F00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/****************
+ ***** MAIN *****
+ ****************/
+
+#main{
+    width: 920px;
+    padding: 40px;
+    background: #fff;
+}
+/****************
+ ** CALENDRIER **
+ ****************/
+
+.year{
+    color: #9d9d9d;
+    font-size: 34px;
+    font-weight: normal;
+    padding: 0 0 25px 0;
+}
+
+.period .months ul{
+    list-style-type: none;
+    font-size: x-large;
+}
+
+.period .months ul li{
+    padding: 0 0 0 10px;
+    display: inline;
+}
+
+.period .months li a{
+    text-decoration: none;
+}
+
+.period .months ul li a{
+    font-weight:bold;  
+    text-transform:uppercase;
+}
+
+.period .months a:hover{
+    color: red;
+}
+
+.period .month{
+    margin-top:12px;
+}
+
+.period table{  border-collapse:collapse;}
+.period table td{  border:1px solid #A3A3A3;  width:80px;  height:80px;}
+.period table td.today{  border:2px solid #D90000;  width:80px;  height:80px;}
+.period table td.padding{  border:none;}
+.period table td:hover{  background:#DFDFDF;  cursor:pointer;}
+.period table th{  font-weight:normal;  color:#A8A8A8;}
+.period table td .day{  color:#8C8C8C;  bottom:-40px;  right:5px;  font-weight:bold;  font-size:24.3pt;}
+.period table td .events{  position:relative;  width:79px;  height:0px;  margin:-39px 0px 0px;  padding:0px;}
+.period table td .events li{  width:10px;  height:10px;  float:left;  background:#000;  /*+border-radius:10px;*/  -moz-border-radius:10px;  -webkit-border-radius:10px;  -khtml-border-radius:10px;  border-radius:10px 10px 10px 10px;  margin-left:6px;  overflow:hidden;  text-indent:-3000px;}
+.period table td:hover .events{  position:absolute;  left:582px;  top:66px;  width:442px;  list-style:none;  margin:0px;  padding:11px 0px 0px;}
+.period table td:hover .events li{  height:40px;  line-height:40px;  font-weight:bold;  border-bottom:1px solid #D6D6D6;  padding-left:41px;  text-indent:0;  background:none;  width:500px;}
+.period table td:hover .events li:first-child{  border-top:1px solid #D6D6D6;}
+.period .clear{  clear:both;}
+
+.months ul li a:hover, .months ul li a.active {
+    color: #D90000;
+}
+
+/****************
+ * RESERVATION *
+ ****************/
+
+label {
+    display:block;
+    width: 150px;
+    float: left;
+}
+
+/***************
+ *** CONTACT ***
+ ***************/
+
+fieldset{
+    width: 50%;
+}
+
+#puce{
+    list-style-type: none;
+}
+
+/**************
+ *** PROFIL ***
+ **************/
+
+.deco{
+    float: right;
+    margin: -160px 53px 0 0;
+}
+
+#change{
+    float: right;
+}
+
+/****************
+ **** Footer ****
+ ****************/
+
+#footer_wrapper{
+    width: 100%;
+    background: #000;
+}
+
+#footer{
+    width: 920px;
+    padding: 30px 40px;
+    margin: auto;
+    color: #ddd;
+}
+
+#col1{
+    float: left;
+    padding-right: 24px;
+    margin-right: 25px;
+    border-right: 1px solid #131313;
+}
+
+#footer li a { color: #9d9d9d; text-decoration: none; }
+
+.menu_footer{ margin: 20px 0; padding: 0; list-style: none;}
+
+.menu_footer li a:hover { 
+    color: #fff; 
+    text-decoration: none;
+}
+
+#footer h4 {
+    color: #bebebe;
+    font-weight: normal;
+}
+
+/*************
+ * CONNEXION *
+ *************/
+
+#wp-submit {
+    margin: 21px 0 -15px 15px;
+}
+
+#loginform > p:nth-child(1) > label {
+    width: 162px;
+}
