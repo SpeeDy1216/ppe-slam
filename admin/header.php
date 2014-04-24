@@ -7,7 +7,7 @@
 	<body>
 		<div id="global">
 			<div id="header">
-				<h1>Utilisateurs</h1>
+				<h1><?php echo $_GET['page']; ?></h1>
 			</div>
 			<div id="contener">
                             

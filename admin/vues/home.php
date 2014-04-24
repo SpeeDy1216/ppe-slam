@@ -15,6 +15,7 @@
 						<li><a href="index.php?page=reservation">Dernière réservation</a></li>
 						<li><a href="index.php?page=user">Liste utilisateurs</a></li>
 						<li><a href="index.php?page=type">Liste des types</a></li>
+						<li><a href="index.php?page=colloque">Liste des colloques</a></li>
 					</ul>
 				</div>
 			

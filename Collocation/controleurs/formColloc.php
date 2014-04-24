@@ -12,6 +12,7 @@
     //Vérification des erreurs
     $r=$formcolloc->is_valid($_POST);
     $erreurs_reservation = array();
+    $fc = new formColloc();
     
     if($r){
         //On vérifie les données
@@ -40,6 +41,8 @@
             //Envoie du mail
             mail($formcolloc->get_cleaned_data('mail'), 'Demande de réservation sur le site de JURA', $message_mail, $headers_mail);
             mail($formcolloc->get_cleaned_data('mail'), 'Demande de réservation sur le site de JURA', $message_mail_admin, $headers_mail_admin);
+            
+            $fc->ajouter();
             
             include('/../vues/colloc_effectuee.php');
         }else{

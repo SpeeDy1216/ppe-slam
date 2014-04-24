@@ -7,6 +7,7 @@ class Type{
     function getAllType(){
         $sql = "SELECT * FROM type";
         $req = $GLOBALS['bdd']->query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.  mysql_error());
+        return $req->fetchAll();
     }
     
     /**
@@ -15,6 +16,7 @@ class Type{
     function getType($nom){
         $sql = "SELECT * FROM type WHERE nom = $namr";
         $req = $GLOBALS['bdd']->query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.  mysql_error());
+        return $req->fetchAll();
     }
     
     /**
@@ -30,5 +32,6 @@ class Type{
     function deleteType($id){
         $sql = "DELETE FROM type WHERE id_type = $id";
         $req = $GLOBALS['bdd']->query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.  mysql_error());
+        return $req->fetchAll();
     }
 }
